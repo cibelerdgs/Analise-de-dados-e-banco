@@ -1,0 +1,71 @@
+4- (Jonathan) Qual a quantidade
+ de projetos do campus apodi por area_conhecimento.
+ (coluna, pizza)
+ <area_conhecimento, quantidade>
+
+6- (Carlos) Quantidade de projetos por area de conhecimento. (pizza)
+<area_conhecimento, quantidade>
+
+7- (Carlos) Quantidade de projetos por ano do campus Apodi.,
+ (coluna, linha)
+<ano, quantidade>
+
+3- (Júlia) Tempo médio de execução dos projetos
+ de extensão por area de conhecimento. (coluna)
+<area_conhecimento, 139 dias>
+
+10- Os 10 servidores que mais coordenaram projetos no campus Apodi.
+ (colunas)
+<nome_servidor, quantidade>
+
+8- Qual a quantidade de projetos por ano que envolvem "programação"
+(o termo aparece no título, resumo ou justificativa).
+
+
+
+=======
+5- (Israel) Qual a quantidade de pessoas envolvidas
+  nos projetos por campi. (coluna)
+  <campi, quantidade>
+
+1- (Carlos) Quantidade de projetos por ano.,
+ (coluna, linha)
+<ano, quantidade>
+
+2- (Carlos) Quantidade de projetos por campi. (pizza)
+<campi, quantidade>
+
+8- Qual a quantidade de projetos por ano que envolvem "programação"
+(o termo aparece no título, resumo ou justificativa).
+
+9- Os 10 servidores que mais coordenaram projetos. (colunas)
+<nome_servidor, quantidade)
+
+
+
+Gráficos
+from matplotlib import pyplot
+
+pyplot.figure(5)
+pyplot.title('Questão 5')
+pyplot.xlabel('Anos')
+pyplot.ylabel('Qtde. Bolsas')
+pyplot.plot( list(questao5.keys()), \
+  list(questao5.values()), '-*r')
+#pyplot.show()
+pyplot.savefig('figura-5.png')
+
+pyplot.figure(3)
+pyplot.title('Título')
+pyplot.bar(\
+ range(len(questao3.keys())), questao3.values())
+pyplot.savefig('figura-3.png')
+
+pyplot.figure(4)
+pyplot.title('Questão 4')
+pyplot.pie(questao4.values(), labels=questao4.keys())
+#pyplot.legend( questao4.keys() )
+pyplot.savefig('figura-4.png')
+
+
+
